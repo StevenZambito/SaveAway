@@ -1,0 +1,60 @@
+.createGoalPage {
+  border: solid green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // min-height: 100vh;
+}
+
+.createGoal {
+  border-radius: 0.3rem;
+  padding: 3rem;
+  background-color: white;
+  font-size: 1.5rem;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    text-align: center;
+  }
+  form div + div input {
+    width: 100px;
+  }
+  input {
+    margin-top: 1rem;
+    width: 300px;
+    border-radius: 0.3rem;
+    border: solid thin;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+.emojis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  select {
+    font-size: 1rem;
+  }
+}
+
+.createButton {
+  margin-top: 2rem;
+  button {
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    border: solid thin;
+    font-size: 1rem;
+  }
+  button:hover {
+    cursor: pointer;
+  }
+}
