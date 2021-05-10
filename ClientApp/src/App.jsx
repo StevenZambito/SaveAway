@@ -4,5 +4,5 @@ import { CreateGoal } from './pages/CreateGoal'
 import './custom.scss'
 
 export function App() {
-  return <CreateGoal />
+  return <SaveAway />
 }

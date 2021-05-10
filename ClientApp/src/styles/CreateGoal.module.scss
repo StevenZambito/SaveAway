@@ -1,5 +1,5 @@
 .createGoalPage {
-  border: solid green;
+  // border: solid green;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,4 +57,8 @@
   button:hover {
     cursor: pointer;
   }
+}
+
+input:focus {
+  outline: none;
 }

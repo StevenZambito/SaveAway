@@ -1,1 +1,42 @@
+.saveAwayPage {
+  // border: solid green;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
+.goalBoxContainer {
+  border: solid purple;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emoji {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+.progressBar {
+  padding-left: 0.4rem;
+}
+
+.goalBox {
+  padding: 1rem 2rem 2rem 2rem;
+  border-radius: 0.3rem;
+  // border: solid purple;
+  background-color: white;
+  margin: 0.5rem;
+}
+
+.numberInfo {
+  // border: solid green;
+  p {
+    margin-bottom: 1rem;
+    color: rgb(130, 130, 130);
+  }
+}
