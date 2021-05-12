@@ -1,8 +1,23 @@
-.header {
+.header div {
   color: white;
-  text-align: center;
+  background-color: rgb(8, 136, 247);
+  display: flex;
+  justify-content: space-evenly;
   font-size: 3rem;
   // border: solid red;
   padding: 1rem;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  button {
+    border-radius: 0.4rem;
+    padding: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+      sans-serif;
+    cursor: pointer;
+    align-items: center;
+    background-color: white;
+    border: solid thin white;
+    color: rgb(8, 136, 247);
+    font-size: 0.9rem;
+  }
 }

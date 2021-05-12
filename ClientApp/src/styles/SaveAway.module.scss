@@ -6,37 +6,75 @@
 }
 
 .goalBoxContainer {
-  border: solid purple;
+  // border: solid purple;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 1rem;
 }
 
 .emoji {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
   text-align: center;
+  p + p {
+    font-size: 1rem;
+  }
   p {
     margin-bottom: 1rem;
+    word-wrap: break-word;
   }
 }
 
 .progressBar {
-  padding-left: 0.4rem;
+  // padding-left: 0.4rem;
+  text-align: center;
 }
 
 .goalBox {
   padding: 1rem 2rem 2rem 2rem;
+  border: solid thin lightgrey;
   border-radius: 0.3rem;
   // border: solid purple;
   background-color: white;
   margin: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+}
+
+.addGoalBox {
+  padding: 1rem 2rem 2rem 2rem;
+  border: solid thin lightgrey;
+  border-radius: 0.3rem;
+  // border: solid purple;
+  background-color: white;
+  margin: 0.5rem;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.addGoalBox:hover {
+  border: solid rgb(8, 136, 247);
+  transform: scale(1.05);
 }
 
 .numberInfo {
-  // border: solid green;
   p {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     color: rgb(130, 130, 130);
   }
+}
+
+.targetAndAmount {
+  display: flex;
+  justify-content: space-between;
 }
