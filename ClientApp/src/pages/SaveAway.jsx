@@ -6,7 +6,37 @@ export function SaveAway() {
     <>
       <div className={styles.saveAwayPage}>
         <Header />
+        <div className={styles.searchContainerMain}>
+          <section className={styles.searchContainer}>
+            <div className={styles.search}>
+              <input
+                type="text"
+                className={styles.searchTerm}
+                placeholder="Which goal are you looking for?"
+              />
+              <button type="submit" className={styles.searchGoButton}>
+                <i className="fa fa-search"></i>
+              </button>
+            </div>
+          </section>
+        </div>
+        <div className={styles.searchContainerMain}>
+          <section className={styles.dropDownSort}>
+            <p>Sort By:</p>
+            <select>
+              <option value="Alphabetical">Goal: A to Z</option>
+              <option value="ByYear">Amount Saved: High to Low</option>
+            </select>
+          </section>
+        </div>
+
         <div className={styles.goalBoxContainer}>
+          <div className={styles.addGoalBox}>
+            <div className={styles.emoji}>
+              <p>Checking</p>
+              <p>$34000</p>
+            </div>
+          </div>
           <div className={styles.addGoalBox}>
             <div className={styles.emoji}>
               <p>+</p>
