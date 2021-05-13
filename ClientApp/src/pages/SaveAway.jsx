@@ -34,6 +34,7 @@ export function SaveAway() {
         <div className={styles.goalBoxContainer}>
           <div className={styles.addGoalBox}>
             <div className={styles.emoji}>
+              <h1>🏦</h1>
               <p>Checking</p>
               <p>$34000</p>
             </div>
