@@ -1,0 +1,129 @@
+.createGoalPage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgb(240, 240, 240);
+}
+
+.createGoalContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+}
+
+.createGoal {
+  border-radius: 0.3rem;
+  border: solid thin lightgrey;
+  padding: 3rem;
+  background-color: white;
+  font-size: 1.5rem;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  h2 {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  form div + div input {
+    width: 100px;
+  }
+  input {
+    margin-top: 1rem;
+    width: 300px;
+    border-radius: 0.3rem;
+    border: solid thin;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+.emojis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  select {
+    font-size: 1rem;
+  }
+}
+
+.createButton {
+  margin-top: 2rem;
+  button {
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    border: solid thin;
+    font-size: 1rem;
+  }
+  button:hover {
+    cursor: pointer;
+  }
+}
+
+input:focus {
+  outline: none;
+}
+
+#wrap {
+  margin-top: 1rem;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+#display {
+  position: relative;
+  top: -10px;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid rgb(8, 136, 247);
+
+  li {
+    display: inline-block;
+    font-family: monospace;
+    font-size: 200%;
+    padding: 5px 12px;
+    background: #fdd147;
+    color: black;
+    margin-right: 1px;
+  }
+}
+
+#numpad {
+  display: flex;
+  flex-direction: row;
+
+  li {
+    font-family: monospace;
+    font-size: 200%;
+    border-radius: 51%;
+    float: left;
+    padding: 12px 20px;
+    background: rgb(8, 136, 247);
+    color: white;
+    margin: 5px;
+    cursor: pointer;
+    -webkit-transition: box-shadow 0.3s ease-in-out;
+    -moz-transition: box-shadow 0.3s ease-in-out;
+    -o-transition: box-shadow 0.3s ease-in-out;
+    -ms-transition: box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+}
+
+.clear {
+  clear: both;
+}
