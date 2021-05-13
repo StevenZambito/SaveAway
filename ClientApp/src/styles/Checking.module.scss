@@ -136,3 +136,15 @@ input:focus {
 .clear {
   clear: both;
 }
+
+.home {
+  display: flex;
+  flex-direction: row;
+}
+
+nav {
+  margin-top: 1rem;
+  a {
+    color: black;
+  }
+}
