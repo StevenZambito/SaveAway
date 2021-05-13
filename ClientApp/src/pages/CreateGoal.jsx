@@ -7,6 +7,9 @@ export function CreateGoal() {
     <>
       <div className={styles.createGoalPage}>
         <Header />
+        <nav>
+          <a href="#/">Home</a>
+        </nav>
         <main className={styles.createGoalContainer}>
           <section className={styles.createGoal}>
             <h1>Create a New Goal</h1>

@@ -115,13 +115,16 @@
   text-align: end;
   font-size: 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 
-  #home {
-    font-size: 1rem;
-    text-decoration: underline;
-  }
   p {
     cursor: pointer;
+  }
+}
+
+nav {
+  margin-top: 1rem;
+  a {
+    color: black;
   }
 }

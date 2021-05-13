@@ -7,10 +7,13 @@ export function Goal() {
     <>
       <div className={styles.goalPage}>
         <Header />
+        <nav>
+          <a href="#/">Home</a>
+        </nav>
+
         <div className={styles.goalBoxContainer}>
           <div className={styles.goalBox}>
             <div className={styles.theX}>
-              <p id={styles.home}>Home</p>
               <p>X</p>
             </div>
             <div className={styles.emoji}>

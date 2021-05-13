@@ -7,20 +7,24 @@ export function Checking() {
     <>
       <div className={styles.createGoalPage}>
         <Header />
-        <main className={styles.createGoalContainer}>
-          <section className={styles.createGoal}>
-            <h1>Checking</h1>
-            <h2>$300000</h2>
-            <form>
-              <div>
-                <input
-                  name="saving"
-                  id="saving"
-                  placeholder="Enter Amount"
-                ></input>
-              </div>
+        <div>
+          <nav>
+            <a href="#/">Home</a>
+          </nav>
+          <main className={styles.createGoalContainer}>
+            <section className={styles.createGoal}>
+              <h1>Checking</h1>
+              <h2>$300000</h2>
+              <form>
+                <div>
+                  <input
+                    name="saving"
+                    id="saving"
+                    placeholder="Enter Amount"
+                  ></input>
+                </div>
 
-              {/* <div id={styles.wrap}>
+                {/* <div id={styles.wrap}>
                 <ul id={styles.display}>
                   <li>+</li>
                   <li>+</li>
@@ -49,12 +53,14 @@ export function Checking() {
                   </div>
                 </ul>
               </div> */}
-              <div className={styles.createButton}>
-                <button type="submit">Add Money</button>
-              </div>
-            </form>
-          </section>
-        </main>
+                <div className={styles.createButton}>
+                  <button type="submit">Add Money</button>
+                </div>
+              </form>
+            </section>
+          </main>
+        </div>
+
         <Footer />
       </div>
     </>
