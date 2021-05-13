@@ -16,18 +16,18 @@ export function Checking() {
                 <input
                   name="saving"
                   id="saving"
-                  placeholder="How much would you like to deposit?"
+                  placeholder="Enter Amount"
                 ></input>
               </div>
 
-              <div id={styles.wrap}>
-                {/* <ul id={styles.display}>
+              {/* <div id={styles.wrap}>
+                <ul id={styles.display}>
                   <li>+</li>
                   <li>+</li>
                   <li>+</li>
                   <li>+</li>
                   <div className={styles.clear}></div>
-                </ul> */}
+                </ul>
                 <ul id={styles.numpad}>
                   <div>
                     <li>1</li>
@@ -48,7 +48,7 @@ export function Checking() {
                     <li>E</li>
                   </div>
                 </ul>
-              </div>
+              </div> */}
               <div className={styles.createButton}>
                 <button type="submit">Add Money</button>
               </div>

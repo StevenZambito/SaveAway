@@ -6,5 +6,5 @@ import { Checking } from './pages/Checking'
 import './custom.scss'
 
 export function App() {
-  return <Checking />
+  return <Goal />
 }

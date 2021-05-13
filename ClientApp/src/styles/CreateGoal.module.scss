@@ -56,10 +56,18 @@
 .createButton {
   margin-top: 2rem;
   button {
-    padding: 0.5rem;
-    border-radius: 0.3rem;
-    border: solid thin;
-    font-size: 1rem;
+    margin: 0.2rem;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+      sans-serif;
+    cursor: pointer;
+    align-items: center;
+    background-color: rgb(8, 136, 247);
+    border: solid thin white;
+    color: white;
+    font-size: 0.9rem;
   }
   button:hover {
     cursor: pointer;

@@ -110,3 +110,18 @@
     font-size: 0.9rem;
   }
 }
+
+.theX {
+  text-align: end;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+
+  #home {
+    font-size: 1rem;
+    text-decoration: underline;
+  }
+  p {
+    cursor: pointer;
+  }
+}

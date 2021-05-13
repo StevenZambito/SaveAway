@@ -9,6 +9,10 @@ export function Goal() {
         <Header />
         <div className={styles.goalBoxContainer}>
           <div className={styles.goalBox}>
+            <div className={styles.theX}>
+              <p id={styles.home}>Home</p>
+              <p>X</p>
+            </div>
             <div className={styles.emoji}>
               <p>🚗</p>
               <p>New Car</p>
@@ -28,6 +32,7 @@ export function Goal() {
             <section className={styles.goalButtons}>
               <button>Add Money</button>
               <button>Withdraw Money</button>
+              <button>Edit Target</button>
             </section>
             <section className={styles.notesSection}>
               <p>Notes</p>
