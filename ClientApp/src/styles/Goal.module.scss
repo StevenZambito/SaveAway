@@ -71,8 +71,11 @@
 }
 
 .numberInfo {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
   p {
     margin-bottom: 0.5rem;
+
     color: rgb(130, 130, 130);
     font-size: 1.4rem;
   }
@@ -91,7 +94,7 @@ li {
 .goalButtons {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
   button {
     margin: 0.2rem;
     cursor: pointer;

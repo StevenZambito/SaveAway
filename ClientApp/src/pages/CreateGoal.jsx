@@ -1,4 +1,5 @@
 import { Header } from '../components/Header'
+import { Footer } from '../components/Footer'
 import styles from '../styles/CreateGoal.module.scss'
 
 export function CreateGoal() {
@@ -55,6 +56,7 @@ export function CreateGoal() {
             </form>
           </section>
         </main>
+        <Footer />
       </div>
     </>
   )

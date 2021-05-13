@@ -5,5 +5,5 @@ import { Goal } from './pages/Goal'
 import './custom.scss'
 
 export function App() {
-  return <Goal />
+  return <SaveAway />
 }

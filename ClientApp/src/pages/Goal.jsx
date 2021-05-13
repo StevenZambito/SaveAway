@@ -1,4 +1,5 @@
 import { Header } from '../components/Header'
+import { Footer } from '../components/Footer'
 import styles from '../styles/Goal.module.scss'
 
 export function Goal() {
@@ -41,6 +42,7 @@ export function Goal() {
             </section>
           </div>
         </div>
+        <Footer />
       </div>
     </>
   )

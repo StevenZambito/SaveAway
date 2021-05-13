@@ -1,5 +1,6 @@
 import styles from '../styles/SaveAway.module.scss'
 import { Header } from '../components/Header'
+import { Footer } from '../components/Footer'
 
 export function SaveAway() {
   return (
@@ -152,6 +153,7 @@ export function SaveAway() {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     </>
   )
