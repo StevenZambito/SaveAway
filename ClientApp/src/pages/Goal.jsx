@@ -24,6 +24,10 @@ export function Goal() {
             <div className={styles.progressBar}>
               <progress value="300" max="3000" />
             </div>
+            <section className={styles.goalButtons}>
+              <button>Add Money</button>
+              <button>Withdraw Money</button>
+            </section>
             <section className={styles.notesSection}>
               <p>Notes</p>
               <ul>
@@ -34,10 +38,6 @@ export function Goal() {
                   by $100
                 </li>
               </ul>
-            </section>
-            <section className={styles.goalButtons}>
-              <button>Add Money</button>
-              <button>Withdraw Money</button>
             </section>
           </div>
         </div>
