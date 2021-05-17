@@ -38,14 +38,16 @@ export function Goal() {
               <button>Edit Target</button>
             </section>
             <section className={styles.notesSection}>
-              <p>Notes</p>
+              <p>Transaction History</p>
               <ul>
-                <li>Can contribute around $500 monthly towards this goal</li>
-                <li>December bonus ($600) going towards goal</li>
                 <li>
-                  Starting in June, need to decrease monthly goal contributions
-                  by $100
+                  $60 was added to the savings goal,"New Car" on 5/14/2021{' '}
                 </li>
+                <li>
+                  $10 was withdrawn from the savings goal, "New Car" and put
+                  into your checking account on 5/15/2021
+                </li>
+                <li>You edited the target amount to $3000 on 5/15/2021</li>
               </ul>
             </section>
           </div>
