@@ -1,6 +1,7 @@
 import styles from '../styles/SaveAway.module.scss'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
+import { Link } from 'react-router-dom'
 
 export function SaveAway() {
   return (
@@ -32,19 +33,24 @@ export function SaveAway() {
         </div>
 
         <div className={styles.goalBoxContainer}>
-          <div className={styles.addGoalBox}>
-            <div className={styles.emoji}>
-              <h1>🏦</h1>
-              <p>Checking</p>
-              <p>$34000</p>
+          <Link to="/checking">
+            <div className={styles.addGoalBox}>
+              <div className={styles.emoji}>
+                <h1>🏦</h1>
+                <p>Checking</p>
+                <p>$34000</p>
+              </div>
             </div>
-          </div>
-          <div className={styles.addGoalBox}>
-            <div className={styles.emoji}>
-              <p>+</p>
-              <p>New Goal</p>
+          </Link>
+          <Link to="/creategoal">
+            <div className={styles.addGoalBox}>
+              <div className={styles.emoji}>
+                <p>+</p>
+                <p>New Goal</p>
+              </div>
             </div>
-          </div>
+          </Link>
+
           <div className={styles.goalBox}>
             <div className={styles.emoji}>
               <p>🚗</p>

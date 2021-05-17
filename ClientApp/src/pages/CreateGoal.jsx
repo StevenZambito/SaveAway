@@ -1,5 +1,6 @@
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
+import { Link } from 'react-router-dom'
 import styles from '../styles/CreateGoal.module.scss'
 
 export function CreateGoal() {
@@ -8,7 +9,9 @@ export function CreateGoal() {
       <div className={styles.createGoalPage}>
         <Header />
         <nav>
-          <a href="#/">Home</a>
+          <Link to="/">
+            <i>Home</i>
+          </Link>
         </nav>
         <main className={styles.createGoalContainer}>
           <section className={styles.createGoal}>
