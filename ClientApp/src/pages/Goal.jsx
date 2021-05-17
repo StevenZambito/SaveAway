@@ -35,11 +35,26 @@ export function Goal() {
             <div className={styles.progressBar}>
               <progress value="300" max="3000" />
             </div>
+
+            {/* <div className={styles.confirm}>
+              <form>
+                <div>
+                  <input
+                    name="saving"
+                    id="saving"
+                    placeholder="Enter Amount"
+                  ></input>
+                  <button type="submit">Confirm</button>
+                </div>
+              </form>
+            </div> */}
+
             <section className={styles.goalButtons}>
               <button>Add Money</button>
               <button>Withdraw Money</button>
               <button>Edit Target</button>
             </section>
+
             <section className={styles.notesSection}>
               <p>Transaction History</p>
               <ul>

@@ -50,25 +50,27 @@ export function SaveAway() {
               </div>
             </div>
           </Link>
+          <Link to="/goal">
+            <div className={styles.goalBox}>
+              <div className={styles.emoji}>
+                <p>🚗</p>
+                <p>New Car</p>
+              </div>
 
-          <div className={styles.goalBox}>
-            <div className={styles.emoji}>
-              <p>🚗</p>
-              <p>New Car</p>
+              <div className={styles.numberInfo}>
+                <p className={styles.targetAndAmount}>
+                  Target Amount: <p>$3000</p>
+                </p>
+                <p className={styles.targetAndAmount}>
+                  Amount Saved: <p>$300</p>
+                </p>
+              </div>
+              <div className={styles.progressBar}>
+                <progress value="300" max="3000" />
+              </div>
             </div>
+          </Link>
 
-            <div className={styles.numberInfo}>
-              <p className={styles.targetAndAmount}>
-                Target Amount: <p>$3000</p>
-              </p>
-              <p className={styles.targetAndAmount}>
-                Amount Saved: <p>$300</p>
-              </p>
-            </div>
-            <div className={styles.progressBar}>
-              <progress value="300" max="3000" />
-            </div>
-          </div>
           <div className={styles.goalBox}>
             <div className={styles.emoji}>
               <p>🎄</p>

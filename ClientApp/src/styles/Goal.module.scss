@@ -30,6 +30,7 @@
 }
 .progressBar {
   text-align: center;
+  margin-bottom: 3rem;
   progress {
     border-radius: 2rem;
     width: 80%;
@@ -94,7 +95,7 @@
 .goalButtons {
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
   button {
     margin: 0.2rem;
     cursor: pointer;
@@ -123,9 +124,39 @@
 }
 
 .goalPage nav {
-  margin-top: 1rem;
+  margin-top: 2rem;
   text-align: center;
   a {
     color: black;
+  }
+}
+
+.confirm {
+  text-align: center;
+
+  input {
+    margin-top: 1rem;
+    width: 300px;
+    border-radius: 0.3rem;
+    border: solid thin;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  button {
+    margin: 0.2rem;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+      sans-serif;
+    cursor: pointer;
+    align-items: center;
+    background-color: rgb(8, 136, 247);
+    border: solid thin white;
+    color: white;
+    font-size: 0.9rem;
+  }
+  button:hover {
+    cursor: pointer;
   }
 }
