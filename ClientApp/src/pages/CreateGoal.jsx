@@ -25,20 +25,20 @@ export function CreateGoal() {
                 ></input>
               </div>
               <div className={styles.emojis}>
-                <label htmlFor="goodies"></label>
-                <select name="goodies" id="goodies">
-                  <option value="cookie">💵</option>
-                  <option value="brocolli">💳</option>
-                  <option value="hotdog">🏠</option>
-                  <option value="donut">🚗</option>
-                  <option value="cookie">🏖</option>
-                  <option value="cookie">✈️</option>
-                  <option value="hamburger">🎟</option>
-                  <option value="bacon">👕</option>
-                  <option value="brocolli">🥪</option>
-                  <option value="brocolli">💻</option>
-                  <option value="cookie">🎉</option>
-                  <option value="cookie">🎄</option>
+                <label htmlFor="savingOptions"></label>
+                <select name="savingOptions" id="savingOptions">
+                  <option value="money">💵</option>
+                  <option value="bills">💳</option>
+                  <option value="home">🏠</option>
+                  <option value="car">🚗</option>
+                  <option value="vacation">🏖</option>
+                  <option value="travel">✈️</option>
+                  <option value="tickets">🎟</option>
+                  <option value="clothes">👕</option>
+                  <option value="food">🥪</option>
+                  <option value="electronics">💻</option>
+                  <option value="party">🎉</option>
+                  <option value="christmas">🎄</option>
                 </select>
               </div>
               <div>
