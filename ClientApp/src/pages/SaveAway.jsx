@@ -2,8 +2,25 @@ import styles from '../styles/SaveAway.module.scss'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 
 export function SaveAway() {
+  const [goals, setGoals] = useState([])
+
+  useEffect(() => {
+    const getGoals = async () => {
+      let url = '/api/Goals'
+
+      const response = await axios.get(url)
+      let sortedGoals = response.data
+
+      setGoals(sortedGoals)
+    }
+
+    getGoals()
+  }, [])
+
   return (
     <>
       <div className={styles.saveAwayPage}>
@@ -50,117 +67,29 @@ export function SaveAway() {
               </div>
             </div>
           </Link>
-          <Link to="/goal">
-            <div className={styles.goalBox}>
-              <div className={styles.emoji}>
-                <p>🚗</p>
-                <p>New Car</p>
+
+          {goals.map((goal) => (
+            <Link to="/goal">
+              <div className={styles.goalBox}>
+                <div className={styles.emoji}>
+                  <p>🚗</p>
+                  <p>{goal.name}</p>
+                </div>
+
+                <div className={styles.numberInfo}>
+                  <p className={styles.targetAndAmount}>
+                    Target Amount: <p>${goal.targetAmount}</p>
+                  </p>
+                  <p className={styles.targetAndAmount}>
+                    Amount Saved: <p>${goal.savedAmount}</p>
+                  </p>
+                </div>
+                <div className={styles.progressBar}>
+                  <progress value="300" max="3000" />
+                </div>
               </div>
-
-              <div className={styles.numberInfo}>
-                <p className={styles.targetAndAmount}>
-                  Target Amount: <p>$3000</p>
-                </p>
-                <p className={styles.targetAndAmount}>
-                  Amount Saved: <p>$300</p>
-                </p>
-              </div>
-              <div className={styles.progressBar}>
-                <progress value="300" max="3000" />
-              </div>
-            </div>
-          </Link>
-
-          <div className={styles.goalBox}>
-            <div className={styles.emoji}>
-              <p>🎄</p>
-              <p>Christmas</p>
-            </div>
-
-            <div className={styles.numberInfo}>
-              <p className={styles.targetAndAmount}>
-                Target Amount: <p>$2000</p>
-              </p>
-              <p className={styles.targetAndAmount}>
-                Amount Saved: <p>$450</p>
-              </p>
-            </div>
-            <div className={styles.progressBar}>
-              <progress value="450" max="2000" />
-            </div>
-          </div>
-          <div className={styles.goalBox}>
-            <div className={styles.emoji}>
-              <p>🏖</p>
-              <p>Hawaii Vacation</p>
-            </div>
-
-            <div className={styles.numberInfo}>
-              <p className={styles.targetAndAmount}>
-                Target Amount: <p>$40000</p>
-              </p>
-              <p className={styles.targetAndAmount}>
-                Amount Saved: <p>$20000</p>
-              </p>
-            </div>
-            <div className={styles.progressBar}>
-              <progress value="20000" max="40000" />
-            </div>
-          </div>
-          <div className={styles.goalBox}>
-            <div className={styles.emoji}>
-              <p>🎟</p>
-              <p>Concert Tickets</p>
-            </div>
-
-            <div className={styles.numberInfo}>
-              <p className={styles.targetAndAmount}>
-                Target Amount: <p>$1000</p>
-              </p>
-              <p className={styles.targetAndAmount}>
-                Amount Saved: <p>$700</p>
-              </p>
-            </div>
-            <div className={styles.progressBar}>
-              <progress value="700" max="1000" />
-            </div>
-          </div>
-          <div className={styles.goalBox}>
-            <div className={styles.emoji}>
-              <p>🎉</p>
-              <p>Birthday Party</p>
-            </div>
-
-            <div className={styles.numberInfo}>
-              <p className={styles.targetAndAmount}>
-                Target Amount: <p>$500</p>
-              </p>
-              <p className={styles.targetAndAmount}>
-                Amount Saved: <p>$400</p>
-              </p>
-            </div>
-            <div className={styles.progressBar}>
-              <progress value="400" max="500" />
-            </div>
-          </div>
-          <div className={styles.goalBox}>
-            <div className={styles.emoji}>
-              <p>💻</p>
-              <p>New Laptop</p>
-            </div>
-
-            <div className={styles.numberInfo}>
-              <p className={styles.targetAndAmount}>
-                Target Amount: <p>$2500</p>
-              </p>
-              <p className={styles.targetAndAmount}>
-                Amount Saved: <p>$1000</p>
-              </p>
-            </div>
-            <div className={styles.progressBar}>
-              <progress value="1000" max="2500" />
-            </div>
-          </div>
+            </Link>
+          ))}
         </div>
         <Footer />
       </div>
