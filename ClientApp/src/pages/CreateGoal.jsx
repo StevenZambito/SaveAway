@@ -1,7 +1,7 @@
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 import { Link, useHistory } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import styles from '../styles/CreateGoal.module.scss'
 import axios from 'axios'
 
@@ -13,23 +13,6 @@ export function CreateGoal() {
   })
 
   const history = useHistory()
-  // function handleName(event) {
-  //   const newNameText = event.target.value
-  //   const updatedGoal = { ...newGoal, name: newNameText }
-  //   setNewGoal(updatedGoal)
-  // }
-
-  // function handleTargetAmount(event) {
-  //   const newTargetAmount = event.target.value
-  //   const updatedGoal = { ...newGoal, targetAmount: newTargetAmount }
-  //   setNewGoal(updatedGoal)
-  // }
-
-  // function handleSavedAmount(event) {
-  //   const newSavedAmount = event.target.value
-  //   const updatedGoal = { ...newGoal, savedAmount: newSavedAmount }
-  //   setNewGoal(updatedGoal)
-  // }
 
   const handleStringFieldChange = (event) => {
     const value = event.target.value
