@@ -7,6 +7,7 @@ import axios from 'axios'
 
 export function SaveAway() {
   const [goals, setGoals] = useState([])
+  const [filterText, setFilterText] = useState('')
 
   useEffect(() => {
     const getGoals = async () => {
@@ -25,6 +26,7 @@ export function SaveAway() {
     <>
       <div className={styles.saveAwayPage}>
         <Header />
+
         <div className={styles.searchContainerMain}>
           <section className={styles.searchContainer}>
             <div className={styles.search}>
@@ -39,6 +41,7 @@ export function SaveAway() {
             </div>
           </section>
         </div>
+
         <div className={styles.searchContainerMain}>
           <section className={styles.dropDownSort}>
             <p>Sort By:</p>
