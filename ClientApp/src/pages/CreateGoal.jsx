@@ -1,8 +1,9 @@
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import styles from '../styles/CreateGoal.module.scss'
+import axios from 'axios'
 
 export function CreateGoal() {
   const [newGoal, setNewGoal] = useState({
@@ -29,11 +30,24 @@ export function CreateGoal() {
   //   setNewGoal(updatedGoal)
   // }
 
-  function handleFieldChange(event) {
+  const handleStringFieldChange = (event) => {
     const value = event.target.value
     const fieldName = event.target.name
     const updatedGoal = { ...newGoal, [fieldName]: value }
     setNewGoal(updatedGoal)
+  }
+
+  const handleIntegerFieldChange = (event) => {
+    const value = event.target.value
+    const fieldName = event.target.name
+    const updatedGoal = { ...newGoal, [fieldName]: value }
+    setNewGoal(updatedGoal)
+  }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    const url = `/api/Goals`
+    await axios.post(url, newGoal)
   }
 
   return (
@@ -55,7 +69,7 @@ export function CreateGoal() {
                   id="name"
                   placeholder="What are you saving for?"
                   value={newGoal.name}
-                  onChange={handleFieldChange}
+                  onChange={handleStringFieldChange}
                 ></input>
               </div>
               <div className={styles.emojis}>
@@ -81,7 +95,7 @@ export function CreateGoal() {
                   id="targetAmount"
                   placeholder="Target Amount"
                   value={newGoal.targetAmount}
-                  onChange={handleFieldChange}
+                  onChange={handleIntegerFieldChange}
                 ></input>
               </div>
 
@@ -91,11 +105,13 @@ export function CreateGoal() {
                   id="savedAmount"
                   placeholder="Saved Amount"
                   value={newGoal.savedAmount}
-                  onChange={handleFieldChange}
+                  onChange={handleIntegerFieldChange}
                 ></input>
               </div>
               <div className={styles.createButton}>
-                <button type="submit">Create Goal</button>
+                <button onClick={handleSubmit} type="submit">
+                  Create Goal
+                </button>
               </div>
             </form>
           </section>
