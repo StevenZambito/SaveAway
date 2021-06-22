@@ -12,6 +12,7 @@ export function CreateGoal() {
     savedAmount: 0,
   })
 
+  const history = useHistory()
   // function handleName(event) {
   //   const newNameText = event.target.value
   //   const updatedGoal = { ...newGoal, name: newNameText }
@@ -47,7 +48,11 @@ export function CreateGoal() {
   const handleSubmit = async (event) => {
     event.preventDefault()
     const url = `/api/Goals`
-    await axios.post(url, newGoal)
+    const response = await axios.post(url, newGoal)
+
+    if (response.status === 201) {
+      history.push('/')
+    }
   }
 
   return (
