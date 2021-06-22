@@ -1,9 +1,34 @@
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import styles from '../styles/CreateGoal.module.scss'
 
 export function CreateGoal() {
+  const [newGoal, setNewGoal] = useState({
+    name: '',
+    targetAmount: 0,
+    savedAmount: 0,
+  })
+
+  function handleName(event) {
+    const newNameText = event.target.value
+    const updatedGoal = { ...newGoal, name: newNameText }
+    setNewGoal(updatedGoal)
+  }
+
+  function handleTargetAmount(event) {
+    const newTargetAmount = event.target.value
+    const updatedGoal = { ...newGoal, targetAmount: newTargetAmount }
+    setNewGoal(updatedGoal)
+  }
+
+  function handleSavedAmount(event) {
+    const newSavedAmount = event.target.value
+    const updatedGoal = { ...newGoal, savedAmount: newSavedAmount }
+    setNewGoal(updatedGoal)
+  }
+
   return (
     <>
       <div className={styles.createGoalPage}>
@@ -22,6 +47,8 @@ export function CreateGoal() {
                   name="saving"
                   id="saving"
                   placeholder="What are you saving for?"
+                  value={newGoal.name}
+                  onChange={handleName}
                 ></input>
               </div>
               <div className={styles.emojis}>
@@ -46,6 +73,8 @@ export function CreateGoal() {
                   name="targetAmount"
                   id="targetAmount"
                   placeholder="Target Amount"
+                  value={newGoal.targetAmount}
+                  onChange={handleTargetAmount}
                 ></input>
               </div>
 
@@ -54,6 +83,8 @@ export function CreateGoal() {
                   name="savedAmount"
                   id="savedAmount"
                   placeholder="Saved Amount"
+                  value={newGoal.savedAmount}
+                  onChange={handleSavedAmount}
                 ></input>
               </div>
               <div className={styles.createButton}>
