@@ -33,6 +33,10 @@ export function SaveAway() {
               <input
                 type="text"
                 className={styles.searchTerm}
+                value={filterText}
+                onChange={(event) => {
+                  setFilterText(event.target.value)
+                }}
                 placeholder="Which goal are you looking for?"
               />
               <button type="submit" className={styles.searchGoButton}>
