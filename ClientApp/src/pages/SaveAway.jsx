@@ -11,7 +11,10 @@ export function SaveAway() {
 
   useEffect(() => {
     const getGoals = async () => {
-      let url = '/api/Goals'
+      const url =
+        filterText.length === 0
+          ? `/api/Goals`
+          : `/api/Goals?filter=${filterText}`
 
       const response = await axios.get(url)
       let sortedGoals = response.data
@@ -20,7 +23,7 @@ export function SaveAway() {
     }
 
     getGoals()
-  }, [])
+  }, [filterText])
 
   return (
     <>
