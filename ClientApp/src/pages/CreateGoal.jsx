@@ -11,21 +11,28 @@ export function CreateGoal() {
     savedAmount: 0,
   })
 
-  function handleName(event) {
-    const newNameText = event.target.value
-    const updatedGoal = { ...newGoal, name: newNameText }
-    setNewGoal(updatedGoal)
-  }
+  // function handleName(event) {
+  //   const newNameText = event.target.value
+  //   const updatedGoal = { ...newGoal, name: newNameText }
+  //   setNewGoal(updatedGoal)
+  // }
 
-  function handleTargetAmount(event) {
-    const newTargetAmount = event.target.value
-    const updatedGoal = { ...newGoal, targetAmount: newTargetAmount }
-    setNewGoal(updatedGoal)
-  }
+  // function handleTargetAmount(event) {
+  //   const newTargetAmount = event.target.value
+  //   const updatedGoal = { ...newGoal, targetAmount: newTargetAmount }
+  //   setNewGoal(updatedGoal)
+  // }
 
-  function handleSavedAmount(event) {
-    const newSavedAmount = event.target.value
-    const updatedGoal = { ...newGoal, savedAmount: newSavedAmount }
+  // function handleSavedAmount(event) {
+  //   const newSavedAmount = event.target.value
+  //   const updatedGoal = { ...newGoal, savedAmount: newSavedAmount }
+  //   setNewGoal(updatedGoal)
+  // }
+
+  function handleFieldChange(event) {
+    const value = event.target.value
+    const fieldName = event.target.name
+    const updatedGoal = { ...newGoal, [fieldName]: value }
     setNewGoal(updatedGoal)
   }
 
@@ -44,11 +51,11 @@ export function CreateGoal() {
             <form>
               <div>
                 <input
-                  name="saving"
-                  id="saving"
+                  name="name"
+                  id="name"
                   placeholder="What are you saving for?"
                   value={newGoal.name}
-                  onChange={handleName}
+                  onChange={handleFieldChange}
                 ></input>
               </div>
               <div className={styles.emojis}>
@@ -74,7 +81,7 @@ export function CreateGoal() {
                   id="targetAmount"
                   placeholder="Target Amount"
                   value={newGoal.targetAmount}
-                  onChange={handleTargetAmount}
+                  onChange={handleFieldChange}
                 ></input>
               </div>
 
@@ -84,7 +91,7 @@ export function CreateGoal() {
                   id="savedAmount"
                   placeholder="Saved Amount"
                   value={newGoal.savedAmount}
-                  onChange={handleSavedAmount}
+                  onChange={handleFieldChange}
                 ></input>
               </div>
               <div className={styles.createButton}>
