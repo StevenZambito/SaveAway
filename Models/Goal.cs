@@ -8,6 +8,8 @@ namespace SaveAway.Models
         [Required]
         public string Name { get; set; }
         [Required]
+        public string Emoji { get; set; }
+        [Required]
         public int TargetAmount { get; set; }
         [Required]
         public int SavedAmount { get; set; }
