@@ -82,7 +82,7 @@ export function SaveAway() {
             <Link to="/goal">
               <div className={styles.goalBox}>
                 <div className={styles.emoji}>
-                  <p>🚗</p>
+                  <p>{goal.emoji}</p>
                   <p>{goal.name}</p>
                 </div>
 
