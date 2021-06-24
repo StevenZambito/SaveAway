@@ -11,6 +11,7 @@ export function CreateGoal() {
     targetAmount: 0,
     savedAmount: 0,
   })
+  const [errorMessage, setErrorMessage] = useState()
 
   const history = useHistory()
 
@@ -30,11 +31,18 @@ export function CreateGoal() {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    const url = `/api/Goals`
-    const response = await axios.post(url, newGoal)
 
-    if (response.status === 201) {
+    try {
+      await axios.post('/api/Goals', newGoal)
       history.push('/')
+    } catch (error) {
+      if (error.response.status === 401) {
+        setErrorMessage('Not authorized')
+      } else if (error.response.status === 400) {
+        const errorString = Object.values(error.response.data.errors).join(' ')
+        console.log(errorString)
+        setErrorMessage(errorString.toLowerCase())
+      }
     }
   }
 
@@ -50,6 +58,9 @@ export function CreateGoal() {
         <main className={styles.createGoalContainer}>
           <section className={styles.createGoal}>
             <h1>Create a New Goal</h1>
+            {errorMessage ? (
+              <p className={styles.errorMessage}>{errorMessage}</p>
+            ) : null}
             <form>
               <div>
                 <input
