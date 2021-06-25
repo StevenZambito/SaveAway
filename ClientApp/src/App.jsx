@@ -15,7 +15,7 @@ export function App() {
       <Route exact path="/creategoal">
         <CreateGoal />
       </Route>
-      <Route exact path="/goal">
+      <Route exact path="/goal/:id">
         <Goal />
       </Route>
       <Route exact path="/checking">

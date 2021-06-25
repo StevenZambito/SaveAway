@@ -1,9 +1,34 @@
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 import { Link } from 'react-router-dom'
+import { useState, useEffect, useParams } from 'react'
 import styles from '../styles/Goal.module.scss'
+import axios from 'axios'
 
 export function Goal() {
+  const params = useParams()
+  const id = params.id
+
+  const [goal, setGoal] = useState({
+    name: '',
+    emoji: '',
+    targetAmount: 0,
+    savedAmount: 0,
+  })
+
+  useEffect(() => {
+    const getGoal = async () => {
+      const url = `/api/Goals/${id}`
+
+      const response = await axios.get(url)
+      let sortedGoals = response.data
+
+      setGoal(sortedGoals)
+    }
+
+    getGoal()
+  }, [id])
+
   return (
     <>
       <div className={styles.goalPage}>
@@ -20,16 +45,16 @@ export function Goal() {
               <p>X</p>
             </div>
             <div className={styles.emoji}>
-              <p>🚗</p>
-              <p>New Car</p>
+              <p>{goal.emoji}</p>
+              <p>{goal.name}</p>
             </div>
 
             <div className={styles.numberInfo}>
               <p className={styles.targetAndAmount}>
-                Target Amount: <p>$3000</p>
+                Target Amount: <p>${goal.targetAmount}</p>
               </p>
               <p className={styles.targetAndAmount}>
-                Amount Saved: <p>$300</p>
+                Amount Saved: <p>${goal.savedAmount}</p>
               </p>
             </div>
             <div className={styles.progressBar}>

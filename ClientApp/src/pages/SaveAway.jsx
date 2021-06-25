@@ -2,12 +2,15 @@ import styles from '../styles/SaveAway.module.scss'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 import { Link } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useParams } from 'react'
 import axios from 'axios'
 
 export function SaveAway() {
   const [goals, setGoals] = useState([])
   const [filterText, setFilterText] = useState('')
+
+  // const params = useParams()
+  // const id = params.id
 
   useEffect(() => {
     const getGoals = async () => {
@@ -79,7 +82,7 @@ export function SaveAway() {
           </Link>
 
           {goals.map((goal) => (
-            <Link to="/goal">
+            <Link to={`/goal/${goal.id}`}>
               <div className={styles.goalBox}>
                 <div className={styles.emoji}>
                   <p>{goal.emoji}</p>
