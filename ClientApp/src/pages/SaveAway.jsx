@@ -4,6 +4,30 @@ import { Footer } from '../components/Footer'
 import { Link } from 'react-router-dom'
 import { useState, useEffect, useParams } from 'react'
 import axios from 'axios'
+import { Goal } from './Goal'
+
+function SingleGoal(props) {
+  return (
+    <div className={styles.goalBox}>
+      <div className={styles.emoji}>
+        <p>{props.goal.emoji}</p>
+        <p>{props.goal.name}</p>
+      </div>
+
+      <div className={styles.numberInfo}>
+        <p className={styles.targetAndAmount}>
+          Target Amount: <p>${props.goal.targetAmount}</p>
+        </p>
+        <p className={styles.targetAndAmount}>
+          Amount Saved: <p>${props.goal.savedAmount}</p>
+        </p>
+      </div>
+      <div className={styles.progressBar}>
+        <progress value="300" max="3000" />
+      </div>
+    </div>
+  )
+}
 
 export function SaveAway() {
   const [goals, setGoals] = useState([])
@@ -82,26 +106,7 @@ export function SaveAway() {
           </Link>
 
           {goals.map((goal) => (
-            <Link to={`/goal/${goal.id}`}>
-              <div className={styles.goalBox}>
-                <div className={styles.emoji}>
-                  <p>{goal.emoji}</p>
-                  <p>{goal.name}</p>
-                </div>
-
-                <div className={styles.numberInfo}>
-                  <p className={styles.targetAndAmount}>
-                    Target Amount: <p>${goal.targetAmount}</p>
-                  </p>
-                  <p className={styles.targetAndAmount}>
-                    Amount Saved: <p>${goal.savedAmount}</p>
-                  </p>
-                </div>
-                <div className={styles.progressBar}>
-                  <progress value="300" max="3000" />
-                </div>
-              </div>
-            </Link>
+            <SingleGoal key={goal.id} goal={goal} />
           ))}
         </div>
         <Footer />
